@@ -2,7 +2,7 @@
 
 require "Customer.php";
 require "Product.php";
-
+require "Order.php";
 
 $c1 = new Customer(1, "Pera", "Peric", 30, 1500);
 $c2 = new Customer(2, "Ana", "Bojcic",25, 2000);
@@ -24,3 +24,6 @@ $c1->buy($p1, 4);
 echo "<br>" . $p1->getAmount() . "<br>";
 $c1->buy($p3);
 echo $c1->getMoney();
+
+$o = new Order();
+$o->addToCart($p1);
